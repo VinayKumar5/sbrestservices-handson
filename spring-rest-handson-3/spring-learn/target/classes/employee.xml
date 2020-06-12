@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">  
+  
+    <bean id="e1" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="101" />
+        <property name="name" value="Rahul" />
+    </bean>
+    
+     <bean id="e2" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="102" />
+        <property name="name" value="Ayush" />
+    </bean>
+    
+     <bean id="e3" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="103" />
+        <property name="name" value="Tony" />
+    </bean>
+    
+     <bean id="e4" class="com.cognizant.springlearn.model.Employee">
+        <property name="id" value="104" />
+        <property name="name" value="Mark" />
+    </bean>
+    
+      
+        <bean id="employeeList" class="java.util.ArrayList">
+        	<constructor-arg>
+        		<list>
+        			<ref bean="e1"></ref>
+        			<ref bean="e2"></ref>
+        			<ref bean="e3"></ref>
+        			<ref bean="e4"></ref>        			
+        		</list>
+        	</constructor-arg>
+        </bean>
+        
+    <bean id="d1" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Finance" />        
+    </bean>
+    
+     <bean id="d2" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="2" />
+        <property name="name" value="Marketing" />        
+    </bean>
+    
+     <bean id="d3" class="com.cognizant.springlearn.model.Department">
+        <property name="id" value="1" />
+        <property name="name" value="Technical" />        
+    </bean>
+    
+     <bean id="departmentList" class="java.util.ArrayList">
+        	<constructor-arg>
+        		<list>
+        			<ref bean="d1"></ref>
+        			<ref bean="d2"></ref>
+        			<ref bean="d3"></ref>        			   			
+        		</list>
+        	</constructor-arg>
+        </bean>
+        
+        
+    
+</beans>
